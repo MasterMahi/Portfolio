@@ -1,4 +1,6 @@
 import { useRef } from 'react';
+import { FaLinkedin, FaGithub } from 'react-icons/fa';
+import profileImg from '../assets/profile.png';
 
 const Hero = () => {
   const cardRef = useRef(null);
@@ -34,11 +36,19 @@ const Hero = () => {
     <section id="home">
       <div className="container hero-grid">
         <div className="hero-content reveal">
-          <h1>Hi, I'm <br/><span className="text-gradient">Mahendrapallavan G</span></h1>
+          <h1>Hi, I'm <br/><span className="text-gradient name-title">Mahendrapallavan G</span></h1>
           <p className="hero-subtitle">Geoinformatics Engineering Graduate specializing in spatial analysis, mobile mapping, and responsive web technologies.</p>
           <div className="btn-group">
             <a href="#contact" className="btn btn-primary hover-target">Get in Touch</a>
             <a href="#projects" className="btn btn-outline hover-target">View Work</a>
+          </div>
+          <div className="social-links" style={{ justifyContent: 'flex-start', marginTop: '2rem' }}>
+            <a href="https://www.linkedin.com/in/mahendrapallavan" target="_blank" rel="noopener noreferrer" className="social-icon hover-target">
+              <FaLinkedin />
+            </a>
+            <a href="https://github.com/MasterMahi" target="_blank" rel="noopener noreferrer" className="social-icon hover-target">
+              <FaGithub />
+            </a>
           </div>
         </div>
         <div 
@@ -48,24 +58,8 @@ const Hero = () => {
           onMouseLeave={handleMouseLeave}
         >
           <div className="hero-card" id="hero-card" ref={cardRef}>
-            <h3>Quick Stats</h3>
-            <div className="stat-grid">
-              <div className="stat-item">
-                <h4>7.80</h4>
-                <p>CGPA</p>
-              </div>
-              <div className="stat-item">
-                <h4>1+</h4>
-                <p>Years Tech Exp</p>
-              </div>
-              <div className="stat-item">
-                <h4>2+</h4>
-                <p>GIS Projects</p>
-              </div>
-              <div className="stat-item">
-                <h4>8</h4>
-                <p>Certifications</p>
-              </div>
+            <div className="hero-image-container">
+              <img src={profileImg} alt="Mahendrapallavan G" className="hero-image" />
             </div>
           </div>
         </div>
