@@ -2,23 +2,23 @@ import { useRef } from 'react';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import profileImg from '../assets/profile.png';
 
-const Hero = () => {
+const hero = () => {
   const cardRef = useRef(null);
 
   const handleMouseMove = (e) => {
     const card = cardRef.current;
     if (!card) return;
-    
+
     const rect = e.currentTarget.getBoundingClientRect();
     const x = e.clientX - rect.left;
     const y = e.clientY - rect.top;
-    
+
     const centerX = rect.width / 2;
     const centerY = rect.height / 2;
-    
+
     const rotateX = ((y - centerY) / centerY) * -10;
     const rotateY = ((x - centerX) / centerX) * 10;
-    
+
     card.style.transform = `rotateX(${rotateX}deg) rotateY(${rotateY}deg)`;
   };
 
@@ -36,7 +36,7 @@ const Hero = () => {
     <section id="home">
       <div className="container hero-grid">
         <div className="hero-content reveal">
-          <h1>Hi, I'm <br/><span className="text-gradient name-title">Mahendrapallavan G</span></h1>
+          <h1>Hi, I'm <br /><span className="text-gradient name-title">Mahendrapallavan G</span></h1>
           <p className="hero-subtitle">Geoinformatics Engineering Graduate specializing in spatial analysis, mobile mapping, and responsive web technologies.</p>
           <div className="btn-group">
             <a href="#contact" className="btn btn-primary hover-target">Get in Touch</a>
@@ -51,8 +51,8 @@ const Hero = () => {
             </a>
           </div>
         </div>
-        <div 
-          className="hero-card-container reveal" 
+        <div
+          className="hero-card-container reveal"
           style={{ transitionDelay: '0.2s' }}
           onMouseMove={handleMouseMove}
           onMouseLeave={handleMouseLeave}
@@ -68,4 +68,4 @@ const Hero = () => {
   );
 };
 
-export default Hero;
+export default hero;

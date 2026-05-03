@@ -3,7 +3,7 @@ import Loader from './components/Loader';
 import Cursor from './components/Cursor';
 import ParticleBackground from './components/ParticleBackground';
 import Navbar from './components/Navbar';
-import Hero from './components/Hero';
+import hero from './components/hero';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
@@ -21,9 +21,9 @@ function App() {
       <div className="noise"></div>
       <ParticleBackground />
       <Navbar />
-      
+
       <main>
-        <Hero />
+        <hero />
         <Skills />
         <Experience />
         <Projects />
