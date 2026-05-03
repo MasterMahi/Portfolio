@@ -3,7 +3,7 @@ import Loader from './components/Loader';
 import Cursor from './components/Cursor';
 import ParticleBackground from './components/ParticleBackground';
 import Navbar from './components/Navbar';
-import hero from './components/hero';
+import Hero from './components/Hero';
 import Skills from './components/Skills';
 import Experience from './components/Experience';
 import Projects from './components/Projects';
@@ -19,11 +19,12 @@ function App() {
       <Loader />
       <Cursor />
       <div className="noise"></div>
+      <div className="bg-image-overlay"></div>
       <ParticleBackground />
       <Navbar />
 
       <main>
-        <hero />
+        <Hero />
         <Skills />
         <Experience />
         <Projects />

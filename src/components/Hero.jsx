@@ -2,7 +2,7 @@ import { useRef } from 'react';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
 import profileImg from '../assets/profile.png';
 
-const hero = () => {
+const Hero = () => {
   const cardRef = useRef(null);
 
   const handleMouseMove = (e) => {
@@ -68,4 +68,4 @@ const hero = () => {
   );
 };
 
-export default hero;
+export default Hero;
