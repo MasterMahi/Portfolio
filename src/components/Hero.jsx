@@ -1,6 +1,6 @@
 import { useRef } from 'react';
 import { FaLinkedin, FaGithub } from 'react-icons/fa';
-import profileImg from '../assets/profile.png';
+import profileImg from '../assets/Profile.png';
 
 const Hero = () => {
   const cardRef = useRef(null);
